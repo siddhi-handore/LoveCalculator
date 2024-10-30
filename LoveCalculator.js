@@ -62,6 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
         ansText.innerText =
           "It's hard for both of you to be together; you are poles apart.";
       }
+      localStorage.removeItem("name1");
+      localStorage.removeItem("name2");
     } else {
       ansText.innerText = "Names not provided. Go back and try again.";
     }
