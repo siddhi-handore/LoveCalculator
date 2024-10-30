@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <script src="LoveCalculator.js" defer></script>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, #ffb3c6, #fb6f92);
+    }
+    .result {
+      width: 50%;
+      height: 70%;
+      padding:2%;
+      background-color: #ffb3c6;
+      border-radius: 20px;
+      box-shadow: #fb6f92 0px 13px 27px -5px, #fb6f92 0px 8px 16px -8px;
+    }
+    .result .top{
+        width:100%;
+        height:20%;
+        /* background-color:red; */
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:5%;
+    }
+    .top h1{
+        font-size:3.5vw;
+        color:#fb6f92;
+        font-family:cursive;
+    }
+    .top .ri-heart-3-fill {
+      font-size: 2.5vw;
+      color: #fb6f92;
+    }
+    .result .percentage{
+        width:100%;
+        height:35%;
+        /* background-color: red; */
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .percentage h1{
+        font-size:5vw;
+        font-family:cursive;
+        color: #f0d8db;
+        -webkit-text-stroke-color: #fb6f92;
+        -webkit-text-stroke-width: 2px;
+    }
+    .result .ans{
+        width:100%;
+        height:45%;
+        padding:2%;
+        /* background-color: red; */
+        text-align: center;
+    }
+    .ans h1{
+        font-size:2.5vw;
+        font-family:cursive;
+        color:#fb6f92;
+    }
+    @media (max-width:600px)
+    {
+      .result{
+        width:85%;
+        height:65%;
+      }
+      .top h1{
+        font-size:8.5vw;
+      }
+      .top .ri-heart-3-fill
+      {
+        font-size:7.5vw;
+      }
+      .percentage h1{
+        font-size:18vw;
+        -webkit-text-stroke-width: 3px;
+      }
+      .ans h1{
+        font-size:8vw;
+      }
+    }
+  </style>
+  <body>
+    <div class="result">
+      <div class="top">
+        <h1 id="name1"></h1>
+        <i class="ri-heart-3-fill"></i>
+        <h1 id="name2"></h1>
+      </div>
+      <div class="percentage">
+        <h1 id="per"></h1>
+      </div>
+      <div class="ans">
+        <h1 id="msg"></h1>
+      </div>
+    </div>
+  </body>
+</html>
