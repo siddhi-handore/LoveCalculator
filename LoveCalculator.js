@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Check which page is loaded
   const path = document.location.pathname;
 
   if (path.includes("LoveCalculator.html")) {
-    // Code for love.html
+    
     const nm1 = document.querySelector("#nm1");
     const nm2 = document.querySelector("#nm2");
     const btn = document.querySelector("#btn");
@@ -14,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	  nm1.value = "";
 	  nm2.value = "";
 
-      // Validate input
+     
       if (str1.length <= 2 || str2.length <= 2) {
         nm1.value = "Enter valid name";
         nm2.value = "Enter valid name";
@@ -27,21 +26,20 @@ document.addEventListener("DOMContentLoaded", () => {
           nm2.style.color = "#fb6f92";
         }, 1000);
       } else {
-        // Save names to localStorage and navigate to result.html
+        
         localStorage.setItem("name1", str1);
         localStorage.setItem("name2", str2);
         calculateLoveScore(str1, str2);
-        window.location.href = "result.html"; // Redirects to result.html
+        window.location.href = "result.html"; 
       }
     });
   } else if (path.includes("result.html")) {
-    // Code for result.html
+    
     const name1Elem = document.getElementById("name1");
     const name2Elem = document.getElementById("name2");
     const mainResult = document.querySelector(".percentage h1");
     const ansText = document.querySelector(".ans h1");
 
-    // Retrieve names from localStorage
     const name1 = localStorage.getItem("name1");
     const name2 = localStorage.getItem("name2");
 
@@ -49,11 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
       name1Elem.innerText = name1;
       name2Elem.innerText = name2;
 
-      // Calculate the love score
       const score = calculateLoveScore(name1, name2);
       mainResult.innerText = `${score}%`;
 
-      // Customize result message
       if (score > 75) {
         ansText.innerText = "You are a perfect match!";
       } else if (score > 50) {
